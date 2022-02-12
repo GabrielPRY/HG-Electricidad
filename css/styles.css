@@ -68,16 +68,18 @@ h6{
 
 /*tamaño, color y margen para el h1*/
 h1{
-    font-size: 34px;
+    font-size: 40px;
     line-height: 1.5;
     letter-spacing: -.2px;
     color: whitesmoke;
     margin: 34px;
+    text-align: center;
 }
 
 /* los textos en strong*/
 h1 strong{
-    color: rgb(7 14 233);
+    color: rgb(221, 200, 155);
+    text-decoration: underline;
 }
 
 /*texto para los h2 y configuracion*/
@@ -94,18 +96,24 @@ h2 {
 
 /*configraicon de la parte prinpial*/
 .hero{
-    height: 380px;
+    height: 420px;
     background-color: rgb(22, 48, 26);
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    flex-direction: wrap;
 }
 
 
 /*config de la imagen del hero*/
 .heroImage{
     object-fit: cover;
+    width: 330px;
+    height: auto;
+}
+
+.hero h1{
+    background-color: rgb(91 87 87 / 33%)
 }
 
 /*el articulo*/
@@ -210,13 +218,6 @@ figure{
     left: 5px;
     top: 5px;
     color: whitesmoke;
-    transition: background-color .5s;
-    transition: color .5s;
-}
-
-.burger-button:hover{
-    background-color: whitesmoke;
-    color: black;
 }
 
 .footer{
@@ -366,6 +367,28 @@ figure{
     .container{
         padding: 0 1em;
     }
+
+    .hero{
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        padding: 2em;;
+    }
+
+    h1{
+        font-size: 2em;
+        z-index: 2;
+    }
+
+    .heroImage{
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -425,5 +448,7 @@ figure{
 }
 
 @media screen and (max-width: 320px) {
-    
+    .hero h1{
+        font-size: 19px;
+    }
 }
