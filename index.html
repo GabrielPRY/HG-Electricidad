@@ -12,13 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+
 </head>
 
 <body>
+    <i class="icon-menu burger-button"></i>
     <header class="header">
         <div class="container">
             <figure class="logo">
-                <img src="/images/logo.png" alt="logo" height="50px">
+                <img src="/images/logo.png" alt="logo">
             </figure>
             <nav class="menu">
                 <ol>
@@ -37,7 +39,7 @@
             </nav>
         </div>
     </header>
-    <section class="hero">
+    <!--  <section class="hero">
         <div class="container">
             <h1> HG Electricidad <br>
                 <strong>servicio técnico</strong> <br>
@@ -48,8 +50,8 @@
                 <img class="hero" src="/images/hero.jpg" alt="hero" width="500" height="300">
             </figure>
         </div>
-    </section>
-    <section id="proyectos" class="projects">
+    </section> -->
+    <!-- <section id="proyectos" class="projects">
         <div class="container">
             <h2>Proyectos</h2>
             <article class="projectArticle">
@@ -79,11 +81,11 @@
                 </div>
             </article>
         </div>
-    </section>
-    <div class="container">
+    </section> -->
+    <!-- <div class="container">
         <h2 class="experienceListTitle">Experiencia y Certificaciones</h2>
-    </div>
-    <section id="experiencia" class="experienceList">
+    </div> -->
+    <!-- <section id="experiencia" class="experienceList">
         <div class="container">
             <article class="experience">
                 <figure class="experienceImageContainer">
@@ -130,8 +132,8 @@
                 </div>
             </article>
         </div>
-    </section>
-    <section id="contacto" class="contact">
+    </section> -->
+    <!-- <section id="contacto" class="contact">
         <div class="container">
             <form action="/contacto" class="formEmail">
                 <h3>Contacto</h3>
@@ -145,8 +147,8 @@
                 <p class="socialLink Direction"></p>
             </div>
         </div>
-    </section>
-    <section class="footer">
+    </section> -->
+    <!-- <section class="footer">
         <div class="container">
             <div>
                 <p>HG Electricidad <img src="/images/logo.png" alt="logo" width="30px"> </p>
@@ -156,7 +158,39 @@
                 <p>Diseñado por <a href="kirby.com">Gabriel Gauto</a></p>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <script>
+
+        const tablet = window.matchMedia('screen and (max-width: 767px)');
+
+        const menu = document.querySelector('.menu');
+
+        const burgerButton = document.querySelector('.burger-button');
+
+        tablet.addListener(validator);
+
+        function validator(event) {
+            if (event.matches == true) {
+                burgerButton.addEventListener('click', hideShow);
+            }
+            else {
+                burgerButton.removeEventListener('click', hideShow);
+            }
+        }
+
+        validator(validator);
+
+        function hideShow() {
+            if (menu.classList.contains('is-active')) {
+                menu.classList.remove('is-active');
+            } else {
+                menu.classList.add('is-active');
+            }
+        }
+
+    </script>
+
 </body>
 
 </html>

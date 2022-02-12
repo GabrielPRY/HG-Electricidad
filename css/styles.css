@@ -1,3 +1,53 @@
+
+
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?irqw8o');
+    src:  url('../fonts/icomoon.eot?irqw8o#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?irqw8o') format('truetype'),
+      url('../fonts/icomoon.woff?irqw8o') format('woff'),
+      url('../fonts/icomoon.svg?irqw8o#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\e900";
+  }
+  .icon-direction:before {
+    content: "\e901";
+  }
+  .icon-gmail:before {
+    content: "\e902";
+    color: #d14836;
+  }
+  .icon-whatsapp:before {
+    content: "\e903";
+    color: #25d366;
+  }
+  .icon-outlook:before {
+    content: "\e904";
+    color: #0072c6;
+  }
+  
+
 /* se cambia la fuente para el cuerpo en general */
 body{
     margin: 0;
@@ -20,7 +70,7 @@ h6{
 h1{
     font-size: 34px;
     line-height: 1.5;
-    letter-spacing: -0.2px;
+    letter-spacing: -.2px;
     color: whitesmoke;
     margin: 34px;
 }
@@ -102,18 +152,18 @@ h2 {
 
 .header{
     background-color: rgb(22, 48, 26);
-    color: whitesmoke;
+    /* color: whitesmoke; */
     display: flex;
+    justify-content: space-between;
     height: 70px;
-    flex-direction: column;
-    justify-content: space-evenly;
+    /* flex-direction: column; */
     align-items: center;
+    flex-wrap: wrap;
 }
 
-ol,
-ul{
+ol{
     margin: 0;
-    pad: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -126,8 +176,8 @@ figure{
     text-decoration: none;
     display: flex;
     align-items: center;
+    height: inherit; 
     padding: 0 10px;
-    height: inherit;
 }
 
 .menu{
@@ -141,6 +191,32 @@ figure{
 
 .header ol li{
     height: inherit;
+}
+
+.header img{
+    width: 50px;
+}
+
+.burger-button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    line-height: 40px;
+    text-align: center;
+    position: fixed;
+    z-index: 4;
+    left: 5px;
+    top: 5px;
+    color: whitesmoke;
+    transition: background-color .5s;
+    transition: color .5s;
+}
+
+.burger-button:hover{
+    background-color: whitesmoke;
+    color: black;
 }
 
 .footer{
@@ -276,11 +352,78 @@ figure{
 
 
 .container{
-    width: 1000px;
+    max-width: 1000px;
+    flex: 1;
     margin: 0 auto;
     display: inherit;
     justify-content: inherit;
     align-items: inherit;
     height: inherit;
     flex-wrap: inherit;
+}
+
+@media screen and (max-width: 1023px) {
+    .container{
+        padding: 0 1em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .header{
+        display: block;
+        height: auto;
+    }
+
+    .header ol{
+        display: block;
+    }
+
+    .header ol li{
+        height: 50px;
+    }
+
+    .header a{
+        justify-content: center;
+        height: 40px;
+        font-size: 2em; 
+        text-decoration: underline; 
+        margin-bottom: .5em;
+        /* width: 100vw;
+        height: 100vw; */
+    }
+
+    .header .logo{
+        text-align: center;
+    }
+
+    .menu{
+        position: fixed;
+        background: rgb(15 15 15 / 23%);
+        z-index: 3;
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .3s;
+    }
+
+    .menu.is-active{
+        left: 0;
+    }
+
+    .burger-button{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+}
+
+@media screen and (max-width: 320px) {
+    
 }
