@@ -88,20 +88,24 @@ h2 {
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    font-size: 24px;
-    margin-bottom: 6px;
-    justify-content: center;
-    display: flex;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    text-decoration: underline;
 }
 
 /*configraicon de la parte prinpial*/
 .hero{
-    height: 420px;
-    background-color: rgb(22, 48, 26);
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: wrap;
+    
+}
+
+.hero .container{
+    background-color: #b4aeae;
 }
 
 
@@ -116,16 +120,21 @@ h2 {
     background-color: rgb(91 87 87 / 33%)
 }
 
+.projects{
+    padding: 20px;
+}
+
 /*el articulo*/
 .projectArticle {
     border: 1px solid gray;
     border-radius: 10px;
     margin-bottom: 15px;
-    padding: 25px;
-    background: whitesmoke;
+    padding: 20px;
+    background: #b4aeae;
     display: flex;
-    justify-content: center;
-    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .projectType,
@@ -134,8 +143,7 @@ h2 {
     margin: 10px 0;
 }
 
-.projectDescription,
-.projectType{
+.projectDescription{
     font-size: 20px;
 }
 
@@ -149,12 +157,23 @@ h2 {
     margin-bottom: 10px;
 }
 
+.projectType{
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
 .projectDetails{
-    width: 500px;
+    width: 50%;
 }
 
 .projectImageContainer{
-    width: 500px;
+    width: 35%;
+}
+
+.projectImageContainer img{
+    max-width: 100%;
+    border-radius: 8%;
 }
 
 
@@ -422,7 +441,7 @@ figure{
 
     .menu{
         position: fixed;
-        background: rgb(15 15 15 / 23%);
+        background: rgb(0 0 0 / 87%);
         z-index: 3;
         top: 0;
         left: -100vw;
@@ -441,14 +460,58 @@ figure{
     .burger-button{
         display: block;
     }
+
+    .project{
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 480px) {
-    
+
+    .projects{
+        padding: 0;
+    }
+
+    .project{
+        display: block;
+    }
+
+    .projectImageContainer{
+        width: auto;
+        text-align: center;
+    }
+
+    .projectDetails{
+        
+        width: 57%;
+
+        margin: .3em 0;
+    }
+
+    .projectUrl{
+        font-size: 1em;
+    }
+
+    .projectDate{
+        font-size: .7em;
+    }
+
+    .projects h2{
+    margin-bottom: 17px;
+    font-size: 23px;
+    }
+
+    .projectDescription{
+        font-size: 1em;
+    }
 }
 
 @media screen and (max-width: 320px) {
     .hero h1{
         font-size: 19px;
+    }
+
+    .projectDetails{
+        width: 100%;
     }
 }
