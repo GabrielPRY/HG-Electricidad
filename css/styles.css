@@ -113,7 +113,7 @@ h2 {
 }
 
 .hero .container{
-    background-color: #b4aeae;
+    background-color: #c8c9cb30;
 }
 
 
@@ -138,7 +138,7 @@ h2 {
     border-radius: 10px;
     margin-bottom: 15px;
     padding: 20px;
-    background: #b4aeae;
+    background: #c8c9cb30;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -254,7 +254,7 @@ figure{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    border: 1px solid whitesmoke;
+    border-top: 1px solid whitesmoke;
 }
 
 .footer img{
@@ -571,7 +571,7 @@ figure{
     .footer{
         display: block;
         text-align: center;
-        border: 2px solid whitesmoke;
+        border-top: 1px solid whitesmoke;
     }
 
 }
