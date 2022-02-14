@@ -253,6 +253,8 @@ figure{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid whitesmoke;
 }
 
 .footer img{
@@ -566,7 +568,11 @@ figure{
     margin: 17px;
     }
 
-
+    .footer{
+        display: block;
+        text-align: center;
+        border: 2px solid whitesmoke;
+    }
 
 }
 
