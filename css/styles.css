@@ -33,18 +33,26 @@
   }
   .icon-direction:before {
     content: "\e901";
+    font-size: 3em;
+    margin: 0 10px;
   }
   .icon-gmail:before {
     content: "\e902";
     color: #d14836;
+    font-size: 3em;
+    margin: 0 10px;
   }
   .icon-whatsapp:before {
     content: "\e903";
     color: #25d366;
+    font-size: 3em;
+    margin: 0 10px;
   }
   .icon-outlook:before {
     content: "\e904";
     color: #0072c6;
+    font-size: 3em;
+    margin: 0 10px;
   }
   
 
@@ -308,19 +316,25 @@ figure{
 .contact{
     background-color: rgb(22, 48, 26);
     color: white;
-    height: 150px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.socialLink{
-    /* display: inline-block; */
-    /* width: 50px;
-    height: 50px; */
-    /* background-size: 50px 50px; */
-    margin: 0 10px;
+.social span{
+    font-size: 10px;
 }
+
+
+/* .socialLink{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    margin: 0 10px;
+} */
 
 
 /* .socialLink.Whatapps{
@@ -412,6 +426,24 @@ figure{
     .experienceListTitle{
         margin-left: 0;
     }
+
+    .contact{
+        height: auto;
+        padding: 1.5em 0;
+        text-align: center;
+        display: block;
+    }
+
+    .social{
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .formEmail button{
+        margin: 2em auto;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -477,6 +509,13 @@ figure{
     .experienceImage{
         width: 100%;
     }
+
+    
+    .formEmail h3{
+        margin-top: 0;
+    }
+
+   
 }
 
 @media screen and (max-width: 480px) {
@@ -526,6 +565,9 @@ figure{
     font-size: 1.5em;
     margin: 17px;
     }
+
+
+
 }
 
 @media screen and (max-width: 320px) {
